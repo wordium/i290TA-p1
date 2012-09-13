@@ -19,18 +19,15 @@ $(document).ready( function(){
 	$('#load-bookmarks').submit(function() {
     	var username = $('#username').val();
         var searchtag = $('#searchtag').val();
-        alert(username + searchtag);
 
         var deliciousFeedStr = "";
 
         if (username == "" && searchtag != ""){
             deliciousFeedStr = getFeedsByTag();
-            alert(deliciousFeedStr);
         }
         else if (username != "" && searchtag == ""){
             deliciousFeedStr = "http://feeds.delicious.com/v2/json/" + username 
            + "?count=10" + "&callback=?" ;
-            alert(deliciousFeedStr);
         }
     	//fetch all the bookmarks belongs to the inputed user name from Delicious 
 //    	var deliciousFeedStr = "http://feeds.delicious.com/v2/json/tag/" + username 
@@ -157,6 +154,8 @@ function getFeedsByTag(){
     var tag = $('#searchtag').val();
 
     //fetch all the bookmarks belongs to the inputed user name from Delicious 
+    //limit the number of bookmarks displayed to 10
+
     var feedURL = "http://feeds.delicious.com/v2/json/tag/" + tag 
            + "?count=10" + "&callback=?" ;
     return feedURL; 
