@@ -22,17 +22,20 @@ $(document).ready( function(){
 
         var deliciousFeedStr = "";
 
-        if (username == "" && searchtag != ""){
+        if (username == "" && searchtag != ""){ //searching by tag only
             deliciousFeedStr = getFeedsByTag();
         }
-        else if (username != "" && searchtag == ""){
-            deliciousFeedStr = "http://feeds.delicious.com/v2/json/" + username 
-           + "?count=10" + "&callback=?" ;
+        else if (username != "" && searchtag == ""){ //searching by username only
+            deliciousFeedStr = "http://feeds.delicious.com/v2/json/" + username
+           + "?count=10" + "&callback=?" ;  // currently hard coded to retrieve only 10 listings
         }
-    	//fetch all the bookmarks belongs to the inputed user name from Delicious 
-//    	var deliciousFeedStr = "http://feeds.delicious.com/v2/json/tag/" + username 
+        //fetch all the bookmarks belongs to the inputed user name from Delicious 
+//      var deliciousFeedStr = "http://feeds.delicious.com/v2/json/tag/" + username 
 //           + "?count=10" + "&callback=?" ;
-          	
+        else if (username != "" && searchtag != ""){ //searching by both username and tag
+            deliciousFeedStr = "http://feeds.delicious.com/v2/json/" + username + "/" + searchtag
+            + "?count=10" + "&callback=?";
+        }
 
     	$.getJSON(deliciousFeedStr, function(json){
 
