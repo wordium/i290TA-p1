@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Delicious Trailmaker</title>
+		<!-- set reference to the stylesheet -->
+		<link rel="stylesheet" type="text/css" href="myTrailMaker.css" />
+
+		<!-- setup reference to JQuery and JQueryUI via google's hosted resources-->
+		<script src="/Users/WX/Documents/UC Berkeley/INFO 290TA IO Lab/jquery-1.8.1.min.js"></script>
+		<script src="/Users/WX/Documents/UC Berkeley/INFO 290TA IO Lab/jquery-ui-1.8.23.custom/js/jquery-ui-1.8.23.custom.min.js"></script>
+
+		<script src="myTrailMaker.js"></script>
+	</head>
+	
+	<body>
+		<div id="page">
+			<h1>Delicious Trailmaker</h1>
+
+			<form id="load-bookmarks" action="trail_maker_submit" method="get" accept-charset="utf-8">
+				<h2>Enter any Delicious username:</h2>
+				<input type="text" name="username" id="username" value="" />
+				<h2>Enter any bookmark tag:</h2>
+				<input type="text" name="searchtag" id="searchtag" value="" />
+				<input type="submit" value="Get Bookmarks" />
+			</form>
+
+			<div id="bookmarks">
+				<h2>Bookmarks</h2>
+				<ul></ul>
+			</div>
+
+			<div id="new-trail">
+				<h2>New Trail</h2>
+				<ul></ul>
+	            <form id="save-trail" action="" method="post">
+	    			<label for="save-username">Username: </label><input id="save-username" type="text" name="save-username" /><br />
+	    			<label for="save-password">Password: </label><input id="save-password" type="password" name="save-password" /><br />
+	    			<input type="submit" name="make-trail" value="Make New Trail" id="make-trail" />
+	            </form>
+			</div>
+		</div>
+	</body>
+</html>
