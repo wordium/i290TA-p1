@@ -34,7 +34,7 @@ $(document).ready( function(){
 //           + "?count=10" + "&callback=?" ;
         else if (username != "" && searchtag != ""){ //searching by both username and tag
             deliciousFeedStr = "http://feeds.delicious.com/v2/json/" + username + "/" + searchtag
-            + "?count=10" + "&callback=?";
+            + "?count=10" + "&callback=?"; // also hardcoded to retrieve only 10 listings
         }
 
     	$.getJSON(deliciousFeedStr, function(json){
