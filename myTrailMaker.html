@@ -18,29 +18,41 @@
 	
 	<body>
 		<div id="page">
-			<h1>Delicious Trailmaker</h1>
+			<h1 id="header">Delicious Trailmaker</h1>
 
 			<form id="load-bookmarks" action="trail_maker_submit" method="get" accept-charset="utf-8">
-				<strong>Delicious username:</strong>
-				<input type="text" name="username" id="username" value="" /> 	
-				<strong>One bookmark tag:</strong>
-				<input type="text" name="searchtag" id="searchtag" value="" />
-				<input type="submit" value="Get Bookmarks" />
+				<div id="dUsername">
+					<strong>Delicious username:</strong>
+					<input type="text" name="username" id="username" value="" /> 	
+				</div>
+
+				<div id="dTag">
+					<strong>One bookmark tag:</strong>
+					<input type="text" name="searchtag" id="searchtag" value="" />
+				</div>
+
+				<div id="dSubmit" class="button">
+					<input type="submit" value="Get Bookmarks" />
+				</div>
 			</form>
 
 			<div id="bookmarks">
-				<h2>Bookmarks</h2>
-				<ul></ul>
+				<h2 class="section-header">Bookmarks</h2>
+				<div class="section-content">
+					<ul></ul>
+				</div>
 			</div>
 
 			<div id="new-trail">
-				<h2>New Trail</h2>
-				<ul></ul>
-	            <form id="save-trail" action="" method="post">
-	    			<label for="save-username">Username: </label><input id="save-username" type="text" name="save-username" /><br />
-	    			<label for="save-password">Password: </label><input id="save-password" type="password" name="save-password" /><br />
-	    			<input type="submit" name="make-trail" value="Make New Trail" id="make-trail" />
-	            </form>
+				<h2 class="section-header">New Trail</h2>
+				<div class="section-content">
+					<ul></ul>
+		            <form id="save-trail" action="" method="post">
+		    			<label for="save-username">Username: </label><input id="save-username" type="text" name="save-username" /><br />
+		    			<label for="save-password">Password: </label><input id="save-password" type="password" name="save-password" /><br />
+		    			<input type="submit" name="make-trail" value="Make New Trail" id="make-trail" class="button" />
+		            </form>
+		        </div>
 			</div>
 		</div>
 	</body>
