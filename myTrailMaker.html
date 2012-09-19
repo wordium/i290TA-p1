@@ -43,15 +43,37 @@
 				</div>
 			</div>
 
-			<div id="new-trail">
-				<h2 class="section-header">New Trail</h2>
+			<div id="trail">
+				<h2 class="section-header">Trail Builder</h2>
+				<div class="section-header" id="selectTrail">
+						New Trail<input type="radio" name="rSelectTrail" value="new trail"/>
+						Existing Trail<input type="radio" name="rSelectTrail" value="existing trail"/>
+				</div>
 				<div class="section-content">
-					<ul></ul>
+					<form id="find-trail" action="find-trail-submit" method="get">
+						<label for="trail-username">Your Username: </label><input id="trail-username" type="text" name="trail-username"/></br>
+						<label for="trail-name">Your Trail Name: </label><input id="trail-name" type="text" name="trail-name"/>
+						<input type="submit" name="get-trail" value="Get Your Trail" id="get-trail" class="button" />
+					</form>
+
+					<div id="new-trail">
+						<ul class="trail-box"></ul>
+					</div>
 		            <form id="save-trail" action="" method="post">
 		    			<label for="save-username">Username: </label><input id="save-username" type="text" name="save-username" /><br />
 		    			<label for="save-password">Password: </label><input id="save-password" type="password" name="save-password" /><br />
 		    			<input type="submit" name="make-trail" value="Make New Trail" id="make-trail" class="button" />
+		            </form>  
+
+			        <div id="extend-trail">
+			        <b>Add Additional Steps</b></br>
+			        <ul class="trail-box"></ul>
+			     
+		            <form id="update-trail" action="" method="post">
+		            	<label for="append-password">Password: </label><input id="append-password" type="password" name="append-password"/>
+		            	<input type="submit" name="addTo-trail" value="Add To Trail" id="addTo-trail" class="button" />
 		            </form>
+		   			</div>
 		        </div>
 			</div>
 		</div>

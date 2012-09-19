@@ -34,7 +34,7 @@ form {
 	padding: 15px;
 }
 
- #bookmarks, #new-trail {
+ #bookmarks, #trail {
     float: left;
     width: 45%;
     margin: 2%;
@@ -56,7 +56,15 @@ form {
 	padding: 10px 25px;
 }
 
+
 .button{
 	text-align: center;
 }
+
+.trail-box {
+	margin: 1%;
+	border: 1px solid green;
+	min-height: 100px;
+}
+
 
