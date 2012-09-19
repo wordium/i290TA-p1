@@ -20,24 +20,30 @@
 		<div id="page">
 			<h1 id="header">Delicious Trailmaker</h1>
 
-			<form id="load-bookmarks" action="trail_maker_submit" method="get" accept-charset="utf-8">
-				<div id="dUsername">
-					<strong>Delicious username:</strong>
-					<input type="text" name="username" id="username" value="" /> 	
-				</div>
 
-				<div id="dTag">
-					<strong>One bookmark tag:</strong>
-					<input type="text" name="searchtag" id="searchtag" value="" />
-				</div>
-
-				<div id="dSubmit" class="button">
-					<input type="submit" value="Get Bookmarks" />
-				</div>
-			</form>
 
 			<div id="bookmarks">
 				<h2 class="section-header">Bookmarks</h2>
+
+
+				<form id="load-bookmarks" class="section-content" action="trail_maker_submit" method="get" accept-charset="utf-8">
+					<div id="dUsername">
+						<strong>Delicious username:</strong>
+						<input type="text" name="username" id="username" value="" /> 	
+					</div>
+
+					<div id="dTag">
+						<strong>One bookmark tag:</strong>
+						<input type="text" name="searchtag" id="searchtag" value="" />
+					</div>
+
+					<div id="dSubmit" class="button">
+						<input type="submit" value="Get Bookmarks" />
+					</div>
+				</form>
+
+
+
 				<div class="section-content">
 					<ul></ul>
 				</div>
@@ -45,10 +51,12 @@
 
 			<div id="trail">
 				<h2 class="section-header">Trail Builder</h2>
-				<div class="section-header" id="selectTrail">
+
+				<div id="selectTrail">
 						New Trail<input type="radio" name="rSelectTrail" value="new trail"/>
 						Existing Trail<input type="radio" name="rSelectTrail" value="existing trail"/>
 				</div>
+
 				<div class="section-content">
 					<form id="find-trail" action="find-trail-submit" method="get">
 						<label for="trail-username">Your Username: </label><input id="trail-username" type="text" name="trail-username"/></br>
@@ -59,6 +67,7 @@
 					<div id="new-trail">
 						<ul class="trail-box"></ul>
 					</div>
+
 		            <form id="save-trail" action="" method="post">
 		    			<label for="save-username">Username: </label><input id="save-username" type="text" name="save-username" /><br />
 		    			<label for="save-password">Password: </label><input id="save-password" type="password" name="save-password" /><br />
@@ -66,15 +75,15 @@
 		            </form>  
 
 			        <div id="extend-trail">
-			        <b>Add Additional Steps</b></br>
-			        <ul class="trail-box"></ul>
-			     
-		            <form id="update-trail" action="" method="post">
-		            	<label for="append-password">Password: </label><input id="append-password" type="password" name="append-password"/>
-		            	<input type="submit" name="addTo-trail" value="Add To Trail" id="addTo-trail" class="button" />
-		            </form>
+				        <b>Add Additional Steps</b></br>
+				        <ul class="trail-box"></ul>
+				     
+			            <form id="update-trail" action="" method="post">
+			            	<label for="append-password">Password: </label><input id="append-password" type="password" name="append-password"/>
+			            	<input type="submit" name="addTo-trail" value="Add To Trail" id="addTo-trail" class="button" />
+			            </form>
 		   			</div>
-		        </div>
+		        </div> <!-- end section-content -->
 			</div>
 		</div>
 	</body>

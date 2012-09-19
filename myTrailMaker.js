@@ -67,7 +67,16 @@ $(document).ready( function(){
         }//end else if    
     }); //end selectTrail radio botton toggle
 
+// load bookmarks submit button
 	$('#load-bookmarks').submit(function() {
+
+        // validating that username and/or search tag has been entered
+       if ( ($("#username").val()=="") && ($("#searchtag").val()=="")) {
+            alert("Please enter a username and/or tag to search for.");
+            return false;
+        }
+
+        // call function to show bookmarks.
     	displayBookmarks();
         return false;
         
