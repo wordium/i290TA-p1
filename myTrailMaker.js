@@ -105,6 +105,13 @@ $(document).ready( function(){
 
     //add additional bookmarks to an existing trail upon clicking "Add to Trail" button
     $('#extend-trail').submit( function(){
+        
+        // if password and username are blank, alert the user
+        if( ($("#append-password").val()=="") || ($("#trail-username").val()=="") ){
+            alert("Please enter a user name and password to add to your trail.");
+            return false;
+        }
+
         delicious.password = $('#append-password').val();
         delicious.username = $('#trail-username').val();
         delicious.stepNum = delicious.trailLength;
@@ -262,9 +269,11 @@ function displayTrail(){
 
     if (username == "" ){ //searching by tag only
         alert("Please enter your Delicious username.");
+        return false;
     }
     else if (trailname == ""){ //searching by username only
         alert("Please enter your trail name. E.g. trail:my_trail");
+        return false;
     }
    
     //searching by both username and trail name. Trail name is a tag on the bookmarks.
