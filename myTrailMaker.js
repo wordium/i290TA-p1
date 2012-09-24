@@ -24,6 +24,9 @@ $(document).ready( function(){
             $('#save-trail').show();
             $('#find-trail').hide();
             $('#extend-trail').hide();
+
+            //resets trail boxes in case user previously added to trail
+            $('#new-trail').droppable('option', 'disabled', false);
             $('#trail h2').text("Trail Builder"); 
 
             //clear up the new-trail box area
@@ -333,7 +336,7 @@ function appendToTrail(){
         url: bookmark.find('a').attr('href'),
         description: bookmark.find('a').text(),
         extended: bookmark.data('extended'),
-        tags: (bookmark.data('tags') == "" ? "" : bookmark.data('tags').join(',') + ',') + trailName + ',' + 'step:' + delicious.stepNum,
+        tags: (bookmark.data('tags') == "" ? "" : bookmark.data('tags').join(',') + ',trail:') + trailName + ',' + 'step:' + delicious.stepNum,
         method: 'posts/add',
         username: delicious.username,
         password: delicious.password

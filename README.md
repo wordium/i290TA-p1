@@ -32,4 +32,5 @@ Browser:
 
 Bugs/Quirks
  - Trails cannot be made or edited until the user chooses a radio button (none by default, so the target is not droppable).
- - Vague Delicious tags will return spam (e.g. "design" has a lot of financial help)
+ - Vague Delicious tags will return spam
+ - Bookmark search can sometimes be slow
