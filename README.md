@@ -16,7 +16,9 @@ Delicious username(s) you tested with:
  - xuewan (Wendy's account)
  
 Technologies:
-jquery.min.js and jquery-ui.min.js
+ - JavaScript
+ - jQuery
+ - JSON
 
 URL of the repository on github: 
  - https://github.com/wordium/i290TA-p1
