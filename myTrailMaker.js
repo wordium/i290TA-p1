@@ -24,6 +24,7 @@ $(document).ready( function(){
             $('#save-trail').show();
             $('#find-trail').hide();
             $('#extend-trail').hide();
+            $('#trail h2').text("Trail Builder"); 
 
             //clear up the new-trail box area
             $('#new-trail ul').html("");
@@ -267,14 +268,16 @@ function displayTrail(){
     var trailLength = 0;
 
 
-    if (username == "" ){ //searching by tag only
+    if (username == "" ){ // if username is blank
         alert("Please enter your Delicious username.");
         return false;
     }
-    else if (trailname == ""){ //searching by username only
+    else if (trailname == ""){ // if trailname is blank
         alert("Please enter your trail name. E.g. trail:my_trail");
         return false;
     }
+
+    $('#trail h2').text(trailname); 
    
     //searching by both username and trail name. Trail name is a tag on the bookmarks.
     var deliciousFeedStr = "http://feeds.delicious.com/v2/json/" + username + "/" + trailname
@@ -363,7 +366,6 @@ function appendToTrail(){
                 $('#append-password').val("");
                 displayTrail();
                 alert ("Your trail has been updated!");
-
             }
         }
     }); //end getJSON to post trail
