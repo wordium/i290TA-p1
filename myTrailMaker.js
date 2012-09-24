@@ -12,12 +12,12 @@ $(document).ready( function(){
 
     var trailLength = 0;
 
-//set default display. Hide username, password and buttons until user has selected display  by clicking on the radio button
+//WX: set default display. Hide username, password and buttons until user has selected display  by clicking on the radio button
     $('#find-trail').hide();
     $('#extend-trail').hide();
     $('#save-trail').hide();
 
-//toggle display when user clicks on radio button to choose whether to create
+//WX: toggle display when user clicks on radio button to choose whether to create
 // a new trail or append to existing trail
     $('#selectTrail').change( function() {
         if( $('input[name=rSelectTrail]:checked').val() == "new trail"){
@@ -194,6 +194,7 @@ function saveTrail(){
 /******************************************
 Function: getFeedsByTag
 Description: Construct the URL string needed to retrievel a list of RSS feeds from Delicious.com.
+Author: WX
 *********************************************/
 function getFeedsByTag(){
     var tag = $('#searchtag').val();
@@ -211,6 +212,7 @@ Function: displayBookmarks
 Description: retrieve a list of bookmarks by either a Delicious.com username, or a tag keyword, or both.
             Display the retrieved bookmarks to the user. Allow user to drag the bookmarks from the list
             to the other side of the webpage.
+Author: WX
 *********************************************/
 function displayBookmarks(){
 
@@ -262,6 +264,7 @@ Function: displayTrail
 Description: retrievel a list of bookmarks from Delicious.com using a username provided by the user.
             or using a tag keyword provided by the user, or both
             Display the retrieved bookmarks to the user. 
+Author: WX
 *********************************/
 function displayTrail(){
 
@@ -322,6 +325,7 @@ Function: appendToTrail
 Description: Add additional bookmarks to an existing trail by appending the bookmarks at the end of the trail.
             The exisitng trail name is added to the new bookmarks as a tag. The step number for a new bookmarks starts from 
             the end of the original trail.
+Author: WX
 *****************************/
 function appendToTrail(){
 
